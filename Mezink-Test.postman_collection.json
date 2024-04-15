@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "fc6461a8-8681-4009-8a92-3e6f05549540",
+		"name": "Mezink Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28871676"
+	},
+	"item": [
+		{
+			"name": "Get List Record",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/v1/records",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"records"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-04-14",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "2024-04-15",
+							"disabled": true
+						},
+						{
+							"key": "minCount",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "maxCount",
+							"value": "9",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get List Record Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/v1/records",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"records"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-14",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-15",
+									"disabled": true
+								},
+								{
+									"key": "minCount",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "maxCount",
+									"value": "9",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Apr 2024 21:00:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "261"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success get list records\",\n    \"records\": [\n        {\n            \"id\": 4,\n            \"createdAt\": \"2024-04-15T07:00:00+07:00\",\n            \"totalMarks\": 9\n        },\n        {\n            \"id\": 3,\n            \"createdAt\": \"2024-04-15T02:02:55.074999+07:00\",\n            \"totalMarks\": 6\n        },\n        {\n            \"id\": 1,\n            \"createdAt\": \"2024-04-14T01:38:49.42709+07:00\",\n            \"totalMarks\": 10\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Record",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Anton\",\r\n    \"marks\": [\r\n        1,\r\n        2,\r\n        30\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/records",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"records"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Record",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Anton\",\r\n    \"marks\": [\r\n        1,\r\n        2,\r\n        30\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/records",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"records"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Apr 2024 21:02:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 0,\n    \"msg\": \"Success create record\"\n}"
+				}
+			]
+		}
+	]
+}
