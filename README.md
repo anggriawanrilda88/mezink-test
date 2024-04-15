@@ -5,7 +5,7 @@ A Test to create REST Api.
 # Quick Setup
 To run this API follow this step:
 
-**Ensure you have docker and docker compose on your local computer**
+**Ensure you have docker and docker compose on your local computer**<br>
 **Ensure you has create .env file. You can copy .env file from .env.example**
 
 ```bash
