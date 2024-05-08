@@ -5,26 +5,23 @@ networks:
     driver: bridge
 
 services:
-  postgres:
-    image: 'bitnami/postgresql:13'
-    ports:
-      - '5432:5432'
-    environment:
-      - POSTGRESQL_DATABASE=${DB_NAME}
-      - ALLOW_EMPTY_PASSWORD=yes
-    networks:
-      - go-net
+  # postgres:
+  #   image: 'bitnami/postgresql:13'
+  #   ports:
+  #     - '5432:5432'
+  #   environment:
+  #     - POSTGRESQL_DATABASE=${DB_NAME}
+  #     - ALLOW_EMPTY_PASSWORD=yes
+  #   networks:
+  #     - go-net
 
   go-backend:
     container_name: go-app
-    image: mezink-api
-    build:
-      dockerfile: Dockerfile
-      context: .
+    image: localhost:5000/mezink-api:1.0
     ports:
       - 8080:8080
-    links:
-      - postgres
+    # links:
+    #   - postgres
     networks:
       - go-net
     volumes:

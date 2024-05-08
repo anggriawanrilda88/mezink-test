@@ -3,6 +3,9 @@ include .env
 export DATABASE_URL ?= postgres://$(DB_USERNAME):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=$(DB_SSL_MODE)
 export UNIT_TEST_COVERAGE ?= 60.0
 
+bin:
+	mkdir bin
+
 setup-tools: bin
 	@curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s
 ifeq ($(shell uname), Linux)
